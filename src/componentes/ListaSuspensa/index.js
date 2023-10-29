@@ -6,11 +6,12 @@ const ListaSuspensa = (props) => {
     return (
         <div className='lista-suspensa'>
             <label>{props.label}</label>
-            <select>
-                {props.itens.map(item => <option key={item}>{item}</option>)}
+            <select required={props.required}>
+                {props.itens.map(item => {
+                    return <option key={item}>{item}</option>
+                })}
             </select>
         </div>
-
     )
 }
 
